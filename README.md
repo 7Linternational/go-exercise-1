@@ -37,11 +37,11 @@ Oracle.com account, registration is free)
     - Single execution mode
         1. Create 4 `users` records
         2. Select and display all `users` records
-        3. Update 2 `users` record's description field
+        3. Update 2 `users` records' description field
         4. Delete the ones that where not updated
         5. Select and display all `users` records
     - Concurrent mode
         1. Create 4 `users` records by calling a different go routine for 2 of them each time.
         2. When both of the previous routines finishes select and display all `users` records
-        3. Update 2 `users` record's description field, create a go routine for each record update and a third go routine that will delete the ones that will not be updated. Once all 3 routines finish select and display all `users` records.
+        3. Update 2 `users` records' description field, create a go routine for each record update and a third go routine that will delete the ones that will not be updated. Once all 3 routines finish select and display all `users` records.
 
