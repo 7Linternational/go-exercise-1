@@ -1,0 +1,14 @@
+package main
+
+import (
+	"database/sql"
+)
+
+func createUsers(id, usr, pwd, dscr) {
+	
+}
+
+func main() {
+	db, err := sql.Open("ora", "lalakis/v1de0@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1522))(CONNECT_DATA=(SID=xe)))")
+	err = db.Ping()
+}

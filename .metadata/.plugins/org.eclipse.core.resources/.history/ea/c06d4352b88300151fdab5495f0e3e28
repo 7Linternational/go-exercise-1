@@ -1,0 +1,13 @@
+package main
+
+import (
+	"database/sql"
+)
+
+func createUsers(id, usr, pwd, dscr) {
+	
+}
+
+func main() {
+	
+}

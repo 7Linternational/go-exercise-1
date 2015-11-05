@@ -1,0 +1,28 @@
+package main
+
+import (
+	"database/sql"
+	"fmt"
+)
+/*
+func createUsers(id, usr, pwd, dscr) {
+	
+}
+*/
+func testDb(db *sql.DB) {
+	var username string
+	rows, err := db.Query("select username from users")
+	defer rows.Close()
+	for rows.Next() {
+		err := rows.Scan(&username)
+		fmt.Println(username)
+	}
+	fmt.Println("hello")
+}
+
+func main() {
+	db, err := sql.Open("ora", "lalakis/v1de0@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1522))(CONNECT_DATA=(SID=xe)))")
+	err = db.Ping()
+	fmt.Println("hello2")
+	testDb(db)
+}
