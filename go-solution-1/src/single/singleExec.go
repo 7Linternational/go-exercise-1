@@ -1,3 +1,8 @@
+/**
+ * Database schema
+ * users(id number(10), username varchar(50), password varchar(50), description varchar(50), timestmp timestamp)
+ */
+
 package main
 
 import (
@@ -115,7 +120,7 @@ func deleteUsers(db *sql.DB) {
 	checkError(err)
 }
 
-// It doesn't run. It throws an exit status 3221225785.
+// It doesn't run because of bad configuration. It throws an exit status 3221225785.
 func main() {
 	db, err := sql.Open("ora.v3", "lalakis/v1de0@localhot:1521/xe")
 	
